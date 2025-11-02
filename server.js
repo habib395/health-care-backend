@@ -8,6 +8,7 @@ const sliderRoute = require('./routes/sliderInfoRoute');
 const buyOnline = require('./routes/buyOnlineRoute');
 const footerInfo = require('./routes/footerRoute');
 const contactInfo = require('./routes/contactRoute');
+const faqInfo = require('./routes/faqRoute');
 
 app.use(cors());
 app.use(express.json());
@@ -22,7 +23,8 @@ const startServer = async() =>{
         app.use('/api/v1', sliderRoute);
         app.use('/api/v1', buyOnline);
         app.use('/api/v1', footerInfo);
-        app.use('/api/v1', contactInfo)
+        app.use('/api/v1', contactInfo);
+        app.use('/api/v1', faqInfo)
         
         app.listen(port, () => {
             console.log(`health care is running on port: ${port}`)
