@@ -9,6 +9,7 @@ const buyOnline = require('./routes/buyOnlineRoute');
 const footerInfo = require('./routes/footerRoute');
 const contactInfo = require('./routes/contactRoute');
 const faqInfo = require('./routes/faqRoute');
+const blogsInfo = require('./routes/blogsRoute');
 
 app.use(cors());
 app.use(express.json());
@@ -24,7 +25,8 @@ const startServer = async() =>{
         app.use('/api/v1', buyOnline);
         app.use('/api/v1', footerInfo);
         app.use('/api/v1', contactInfo);
-        app.use('/api/v1', faqInfo)
+        app.use('/api/v1', faqInfo);
+        app.use('/api/v1', blogsInfo);
         
         app.listen(port, () => {
             console.log(`health care is running on port: ${port}`)
