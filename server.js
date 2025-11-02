@@ -6,10 +6,11 @@ const port = process.env.PORT || 8800;
 const { connectDB } = require('./config/db')
 const sliderRoute = require('./routes/sliderInfoRoute');
 const buyOnline = require('./routes/buyOnlineRoute');
+const footerInfo = require('./routes/footerRoute');
+const contactInfo = require('./routes/contactRoute');
 
-
-app.use(cors())
-app.use(express.json())
+app.use(cors());
+app.use(express.json());
 
 const startServer = async() =>{
     try {
@@ -19,7 +20,9 @@ const startServer = async() =>{
             res.send('health care is running')
         })
         app.use('/api/v1', sliderRoute);
-        app.use('/api/v1', buyOnline );
+        app.use('/api/v1', buyOnline);
+        app.use('/api/v1', footerInfo);
+        app.use('/api/v1', contactInfo)
         
         app.listen(port, () => {
             console.log(`health care is running on port: ${port}`)
