@@ -12,6 +12,7 @@ const faqInfo = require('./routes/faqRoute');
 const blogsInfo = require('./routes/blogsRoute');
 const downloadInfo = require('./routes/downloadRoute');
 const reviewsInfo = require('./routes/reviewsRoute');
+const mediaInfo = require('./routes/mediaRoute');
 
 app.use(cors());
 app.use(express.json());
@@ -31,6 +32,7 @@ const startServer = async() =>{
         app.use('/api/v1', blogsInfo);
         app.use('/api/v1', downloadInfo);
         app.use('/api/v1', reviewsInfo);
+        app.use('/api/v1', mediaInfo);
         
         app.listen(port, () => {
             console.log(`health care is running on port: ${port}`)
