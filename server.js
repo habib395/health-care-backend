@@ -15,6 +15,7 @@ const reviewsInfo = require('./routes/reviewsRoute');
 const mediaInfo = require('./routes/mediaRoute');
 const partnarsInfo = require('./routes/partnarsRoute');
 const partnerInfo = require('./routes/partnerRoute');
+const whyDocInfo = require('./routes/whyDocRoute');
 
 app.use(cors());
 app.use(express.json());
@@ -36,7 +37,8 @@ const startServer = async() =>{
         app.use('/api/v1', reviewsInfo);
         app.use('/api/v1', mediaInfo);
         app.use('/api/v1', partnarsInfo);
-        app.use('/api/v1', partnerInfo)
+        app.use('/api/v1', partnerInfo);
+        app.use('/api/v1', whyDocInfo);
         
         app.listen(port, () => {
             console.log(`health care is running on port: ${port}`)
