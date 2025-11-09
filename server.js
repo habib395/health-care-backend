@@ -18,7 +18,12 @@ const partnerInfo = require('./routes/partnerRoute');
 const whyDocInfo = require('./routes/whyDocRoute');
 const starInfo = require('./routes/starRoute');
 
-app.use(cors());
+app.use(cors({
+    origin: 'http://localhost:5174',
+    methods: ['GET', 'POST', 'PUT', 'DELETE'], 
+    credentials: true,
+}
+));
 app.use(express.json());
 
 const startServer = async() =>{

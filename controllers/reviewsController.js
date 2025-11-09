@@ -4,7 +4,8 @@ const reviewsCollection = client.db('health-care').collection('reviews');
 
 exports.getReviewsInfo = async(req, res) => {
     try {
-        const result = await reviewsCollection.findOne({});
+        const cursor = reviewsCollection.find({});
+        const result = await cursor.toArray()
 
         if(!result){
             return res.status(404).json({
