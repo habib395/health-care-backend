@@ -13,10 +13,10 @@ const blogsInfo = require('./routes/blogsRoute');
 const downloadInfo = require('./routes/downloadRoute');
 const reviewsInfo = require('./routes/reviewsRoute');
 const mediaInfo = require('./routes/mediaRoute');
-const partnarsInfo = require('./routes/partnarsRoute');
-const partnerInfo = require('./routes/partnerRoute');
 const whyDocInfo = require('./routes/whyDocRoute');
 const starInfo = require('./routes/starRoute');
+const partnerInfo = require('./routes/partnerRoute');
+const partnarsInfo = require('./routes/partnerAllRoute');
 
 app.use(cors({
     origin: 'http://localhost:5174',

@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const partnerController = require('../controllers/partnarController');
+const partnerCollection = require('../controllers/partnerController')
 
-router.get('/partner', partnerController.getPartnarsInfo);
+router.get('/partner', partnerCollection.getPartnerInfo);
 
 module.exports = router;

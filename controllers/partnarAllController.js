@@ -1,6 +1,6 @@
 const { client } = require('../config/db');
 
-const partnarCollection = client.db('health-care').collection('partner');
+const partnarCollection = client.db('health-care').collection('partners');
 
 exports.getPartnarsInfo = async(req, res)=>{
     try {
