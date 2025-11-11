@@ -18,6 +18,7 @@ const starInfo = require('./routes/starRoute');
 const partnerInfo = require('./routes/partnerRoute');
 const partnarsInfo = require('./routes/partnerAllRoute');
 const premiumInfo = require('./routes/premiumRoute');
+const clinicInfo = require('./routes/clinicRoute');
 
 app.use(cors({
     origin: 'http://localhost:5174',
@@ -48,6 +49,7 @@ const startServer = async() =>{
         app.use('/api/v1', whyDocInfo);
         app.use('/api/v1', starInfo);
         app.use('/api/v1', premiumInfo);
+        app.use('/api/v1', clinicInfo)
 
         app.listen(port, () => {
             console.log(`health care is running on port: ${port}`)
